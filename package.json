@@ -1,0 +1,90 @@
+{
+  "name": "country-codes-collection",
+  "version": "1.0.0",
+  "description": "A modern, well-typed, developer-friendly TypeScript library providing a comprehensive dataset of countries and their codes (ISO 3166-1 alpha-2/alpha-3, calling codes, emoji flags, regions). Reliable, up-to-date, and MIT licensed.",
+  "author": {
+    "name": "Venkata Janapareddy",
+    "url": "https://github.com/venkatajanapareddy"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/venkatajanapareddy/country-codes-collection#readme",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:venkatajanapareddy/country-codes-collection.git"
+  },
+  "bugs": {
+    "url": "https://github.com/venkatajanapareddy/country-codes-collection/issues"
+  },
+  "keywords": [
+    "country",
+    "countries",
+    "codes",
+    "iso",
+    "alpha-2",
+    "alpha-3",
+    "typescript",
+    "calling-codes",
+    "emoji",
+    "flags",
+    "i18n",
+    "international"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./countries.json": "./dist/countries.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "dev": "vitest watch",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "generate:data": "tsx src/data/generate-countries.ts",
+    "prepublishOnly": "npm run build",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "@typescript-eslint/eslint-plugin": "8.32.0",
+    "@typescript-eslint/parser": "8.32.0",
+    "eslint": "^9.7.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-unused-imports": "^4.0.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.3.3",
+    "tsup": "^8.2.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.5.3",
+    "vitest": "^1.6.0",
+    "world-countries": "^5.1.0"
+  },
+  "bin": {
+    "country-codes-collection": "./dist/cli.js",
+    "ccd": "./dist/cli.js"
+  },
+  "lint-staged": {
+    "*.{js,ts,json,md,yml}": "prettier --write",
+    "*.ts": "eslint --fix"
+  }
+}
