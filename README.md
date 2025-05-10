@@ -1,5 +1,5 @@
 [![npm version](https://img.shields.io/npm/v/country-codes-collection.svg)](https://www.npmjs.com/package/country-codes-collection)
-[![CI](https://github.com/venkatajanapareddy/country-codes-collection/actions/workflows/ci.yml/badge.svg)](https://github.com/venkatajanapareddy/country-codes-collection/actions)
+[![CI](https://github.com/venkatajanapareddy/country-codes-collection/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/venkatajanapareddy/country-codes-collection/actions)
 
 # country-codes-collection
 

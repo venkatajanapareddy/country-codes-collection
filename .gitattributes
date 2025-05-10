@@ -1,0 +1,11 @@
+# Properly detect languages for GitHub
+*.ts linguist-language=TypeScript
+*.js linguist-language=JavaScript
+
+# Exclude files from language statistics
+*.json linguist-documentation
+package-lock.json linguist-generated
+src/data/countries.json linguist-documentation
+
+# Handle configuration files
+*.config.js linguist-language=JavaScript 
